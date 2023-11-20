@@ -1,0 +1,19 @@
+### Python template
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Sphinx documentation
+docs/_build/
+
+# Local History for devcontainer
+.devcontainer/bash_history
+
+### macOS template
+# General
+*.DS_Store
+
+# Environments
+.env
+
+### Project template
+apps/media/
