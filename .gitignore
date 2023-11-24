@@ -1,19 +1,35 @@
-### Python template
-# Byte-compiled / optimized / DLL files
-__pycache__/
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
-# Sphinx documentation
-docs/_build/
+# dependencies
+node_modules/
 
-# Local History for devcontainer
-.devcontainer/bash_history
+# Expo
+.expo/
+dist/
+web-build/
 
-### macOS template
-# General
-*.DS_Store
+# Native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
 
-# Environments
-.env
+# Metro
+.metro-health-check*
 
-### Project template
-apps/media/
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
