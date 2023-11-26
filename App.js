@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 
-export default function App() {
+function App() {
   return (
     <View style={styles.container}>
       <Text testID="welcome">Open up App.js to start working on your app!</Text>
@@ -9,6 +9,16 @@ export default function App() {
     </View>
   );
 }
+
+// Default to rendering your app
+let AppEntryPoint = App;
+
+// Render Storybook if storybookEnabled is true
+if (true) {
+  AppEntryPoint = require("./.storybook").default;
+}
+
+export default AppEntryPoint;
 
 const styles = StyleSheet.create({
   container: {

@@ -1,6 +1,9 @@
 {
   "build": {
     "development-simulator": {
+      "env": {
+        "STORYBOOK_ENABLED": "false"
+      },
       "developmentClient": true,
       "distribution": "internal",
       "ios": {
