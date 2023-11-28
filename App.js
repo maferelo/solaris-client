@@ -1,3 +1,4 @@
+import Constants from "expo-constants";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 
@@ -14,7 +15,7 @@ function App() {
 let AppEntryPoint = App;
 
 // Render Storybook if storybookEnabled is true
-if (true) {
+if (Constants.expoConfig.extra.storybookEnabled === "true") {
   AppEntryPoint = require("./.storybook").default;
 }
 
