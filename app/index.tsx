@@ -1,7 +1,8 @@
+import Constants from "expo-constants";
 import { Link } from "expo-router";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
-export default function Page() {
+function Page() {
   return (
     <Link href="/log-in" asChild testID="welcome">
       <Pressable style={styles.container}>
@@ -12,6 +13,13 @@ export default function Page() {
     </Link>
   );
 }
+
+let Entrypoint = Page;
+
+if (Constants.expoConfig.extra.storybookEnabled === "true")
+  Entrypoint = require("../.storybook").default;
+
+export default Entrypoint;
 
 const styles = StyleSheet.create({
   container: {
