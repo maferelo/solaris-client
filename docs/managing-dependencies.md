@@ -1,14 +1,25 @@
+## Managing Dependencies
+
+### Installing dependencies
+
+```
 npx expo install @react-navigation/native-stack -- --save-dev
+```
 
-npm run build
+### Updating dependencies workflow
 
-nvm install --latest-npm
-
+```
 npm outdated
 
-npm update
+npm uninstall @react-navigation/native-stack
 
-npm upgrade
+npx expo install @react-navigation/native-stack
 
-PORT_NUMBER=8081
-lsof -i tcp:${PORT_NUMBER} | awk 'NR!=1 {print $2}' | xargs kill
+npm run build
+```
+
+### Updating npm
+
+```
+nvm install --latest-npm
+```
