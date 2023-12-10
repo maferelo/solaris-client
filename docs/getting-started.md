@@ -27,7 +27,8 @@ npm run start
 you may run into port conflicts, run this to clear any port
 
 ```
-PORT_NUMBER=8081 lsof -i tcp:${PORT_NUMBER} | \
+PORT_NUMBER=8081
+lsof -i tcp:${PORT_NUMBER} | \
   awk 'NR!=1 {print $2}' | \
   xargs kill
 ```

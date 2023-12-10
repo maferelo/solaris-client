@@ -1,7 +1,17 @@
-[1, 2, 3].map((x) => x * x);
+## Javascript Refresh
 
+map changes each element in an array
+
+```js
+[1, 2, 3].map((x) => x * x);
+```
+
+extract needed data from an object
+
+```js
 function storeOrder({ id, currency }) {
   // destructuring
   localStorage.setItem("id", id);
   localStorage.setItem("currency", currency);
 }
+```
