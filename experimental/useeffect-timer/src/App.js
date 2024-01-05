@@ -8,6 +8,8 @@ const Timer = () => {
       setCount((count) => count + 1);
     }, 1000);
     return () => clearInterval(interval);
+    // an empty array of dependencies means this effect will only run once
+    // similar to componentDidMount
   }, []);
 
   return <div className="timer">Timer: {count}</div>;
