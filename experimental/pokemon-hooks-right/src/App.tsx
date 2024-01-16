@@ -107,12 +107,12 @@ export default function App() {
         <input type="text" value={threshold} onChange={onSetThreshold}></input>
         <div>Count over threshold: {countOverThreshold}</div>
       </div>
+      <div className="top-bar">
+        <div>Min: {min}</div>
+        <div>Max: {max}</div>
+      </div>
       <div className="two-column">
         <MemoedPokemonTable pokemon={pokemonWithPower} />
-        <div>
-          <div>Min: {min}</div>
-          <div>Max: {max}</div>
-        </div>
       </div>
     </div>
   );
