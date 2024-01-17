@@ -2,6 +2,7 @@ import React, {
   useCallback,
   useEffect,
   useMemo,
+  useReducer,
   useRef,
   useState,
 } from "react";
@@ -59,12 +60,40 @@ const PokemonTable: React.FunctionComponent<{
 
 const MemoedPokemonTable = React.memo(PokemonTable);
 
+interface CounterState {
+  count: number;
+}
+
+interface CounterAction {
+  type: "increment";
+}
+
+const counterInitialState = { count: 0 };
+
+const timerReducer = (state: CounterState, action: CounterAction) => {
+  switch (action.type) {
+    case "increment":
+      return { count: state.count + 1 };
+    default:
+      return state;
+  }
+};
+
 let appRender = 0;
 export default function App() {
   console.log(`appRender = ${appRender++}`);
   const [pokemon, setPokemon] = useState<Pokemon[]>([]);
   const [tooltipShown, setTooltipShown] = useState<boolean>(false);
+  const [time, setTime] = useState<number>(0);
+  const [counterState, dispatch] = useReducer(
+    timerReducer,
+    counterInitialState
+  );
   const tooltipRef = useRef<HTMLDivElement>(null);
+
+  const increment = () => {
+    dispatch({ type: "increment" });
+  };
 
   const [search, setSearch] = useState("");
   const onSetSearch = useCallback(
@@ -123,6 +152,13 @@ export default function App() {
     [pokemonWithPower]
   );
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime((t) => t + 1);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div>
       <div className="top-bar">
@@ -133,6 +169,9 @@ export default function App() {
         <div>Count over threshold: {countOverThreshold}</div>
         <div ref={tooltipRef}>Tooltip popper</div>
         {tooltipShown && <div>I am the tooltip</div>}
+        <div>Time: {time}</div>
+        <div>Counter: {counterState.count}</div>
+        <button onClick={increment}>Increment</button>
       </div>
       <div className="top-bar">
         <div>Min: {min}</div>
