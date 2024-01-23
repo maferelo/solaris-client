@@ -1,0 +1,25 @@
+{
+    "cells": [
+        {
+            "language": "typescript",
+            "source": [
+                "const test: string = 'test';\nconsole.log(`${test}`);"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "# Front End System Design Interview Checklist\n\n* Ask for clarifying questions\n    * What is the scale of the solution needed?\n        * How many daily active users?\n        * How are they geographically distributed?\n        * What are we expecting in terms of peak traffic?\n    * What are the most business critical use-cases?\n        * What's a user persona we should be targeting?\n    * Identify constraints\n        * Bundle size limitations?\n        * Upfront a11y considerations?\n        * Browser support?\n        * Mobile support requirements?\n* Consider technology options\n    * SPA vs. SSR\n    * Back end architecture\n        * Use load balancers and API gateways with WAF for performance and authorization\n        * Use object storage for blobs\n        * Use in-memory data store (like Redis) for frequent updates\n        * Back all data with persisted data store (PostGres)\n        * Microservices vs. monolith\n    * Framework options\n    * Build/toolchain options\n    * Microfrontend vs. monolith\n    * Testing strategy\n        * How to support E2E testing\n    * SDLC\n        * CI/CD plan\n        * DevOps strategy\n        * Managing cost\n    * Monitoring\n        * Log all transactions and authorization events\n        * Client-side and server-side logging\n        * Real User Monitoring\n        * Trace IDs for distributed systems\n    * Hosting options\n        * Use a CDN\n        * Cache header settings (Cache-Control: max-age)\n            * Bust cache with build hash in filename\n* Consider future use cases\n    * How to handle larger scale\n    * How to extend for additional functionality\n    * How to optimize bundle size for poor connections\n    * How to handle RTL languages\n    * Scaling out development across multiple teams\n* Security\n    * Use a WAF to enforce Content Security Policies, validate/sanitize input, and perform behavioral analysis to prevent malicious use\n    * Encryption\n        * How should encryption keys be generated?\n    * Session token generation and TTL\n    * Avoid XSS, script injection, and CSRF\n    * Avoid using GET for sensitive operations\n* How to get data from point A to point B\n    * Consider access patterns\n        * REST APIs\n        * WebSocket connections\n        * WebRTC connections\n        * SWR for showing stale data while fetching fresh version\n    * How to manage network flakiness\n        * Storing data offline and backfilling upon reconnection\n    * Collaboration mechanisms\n        * Server-based Operational Transform for central server-based systems\n        * CRDT (Conflict-free Replicated Data Type) for decentralized systems\n* Accessibility\n    * How to support screen readers\n    * How to support low-vision\n    * How to support keyboard navigation"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}

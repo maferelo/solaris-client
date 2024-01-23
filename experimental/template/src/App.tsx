@@ -1,8 +1,15 @@
-import "./styles.css";
+import React, { useState } from 'react';
 
-let appRender = 0;
-export default function App() {
-  console.log(`appRender = ${appRender++}`);
-
-  return <div>Hello World</div>;
+interface props {
+  name: string;
 }
+
+const App: React.FC = (props: props) {
+  const [name, setName] = useState()
+
+  return(
+    <div>{props.name}</div>
+  )
+}
+
+export default App

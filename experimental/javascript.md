@@ -15,3 +15,13 @@ function storeOrder({ id, currency }) {
   localStorage.setItem("currency", currency);
 }
 ```
+
+```js
+localStorage.setItem(key, value);
+localStorage.getItem(key);
+localStorage.removeItem(key);
+```
+
+```js
+
+```
