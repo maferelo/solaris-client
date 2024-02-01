@@ -2,10 +2,96 @@
 
 ### Typescript types
 
+#### Primitives
+
 ```ts
 // string | number | boolean | any | void | null | undefined | never
 let a: number = 1;
 const arr: Array<number> = [1, 2, 3];
+```
+
+#### Record
+
+```ts
+let thisRecord: Record<string, number> = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+```
+
+#### Function
+
+```ts
+let myFunc: (a: number, b: number) => number = (a, b) => a + b;
+```
+
+Default parameters
+
+```ts
+let myFunc: (a: number, b: number) => number = (a = 1, b = 2) => a + b;
+```
+
+Optional parameters
+
+```ts
+let myFunc: (a: number, b?: number) => number = (a, b) => a + (b || 0);
+```
+
+Function that returns a function
+
+```ts
+let myFunc: (mutate: (a: number) => number) => number = (mutate) => mutate(1);
+```
+
+#### Promise
+
+```ts
+let myPromise: Promise<number> = new Promise((resolve, reject) => {
+  resolve(1);
+});
+```
+
+#### Extending types
+
+```ts
+interface MyInterface {
+  a: number;
+  b: number;
+}
+
+interface MyExtendedInterface extends MyInterface {
+  c: number;
+}
+```
+
+#### Function overloads
+
+Allows a function to have multiple signatures with different return types.
+
+```ts
+function myFunc(a: number, b: number): number;
+function myFunc(a: string, b: string): string;
+function myFunc(a: unknown, b: unknown): number | string {
+  return (a as number) + (b as number);
+}
+```
+
+#### Tuple
+
+```ts
+let myTuple: [number, string] = [1, "a"];
+```
+
+### Generics
+
+```ts
+function myFunc<T>(a: T): T {
+  return a;
+}
+
+let a = myFunc<number>(1);
+let b = myFunc<string>("a");
 ```
 
 ### React

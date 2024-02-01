@@ -35,6 +35,17 @@ useDebugValue(date, (date) => date.toDateString());
 `useContext` is a hook that allows you to use a context in a component. It takes a context object as an argument and returns the current context value. Should be defined outside the component as it will cause the component to rerender when the context changes. Better use Redux.
 
 ```jsx
+import { createContext } from "react";
+
+const initialState = {
+  first: "Jack",
+  last: "Herrington",
+};
+
+export type UserState = typeof initialState;
+
+const context = createContext < typeof initialState > initialState;
+
 const value = useContext(context);
 ```
 
@@ -103,6 +114,23 @@ const MyComponent: React.FC = () => {
 };
 
 export default MyComponent;
+```
+
+#### [useSyncExternalStore](https://react.dev/reference/react/useSyncExternalStore)
+
+`useSyncExternalStore` is a hook that allows you to use a store in a component. It takes a subscribe function that returns a function that unsubscribes (cleanup) and a getSnapshot function as arguments and returns the current state of the store. Should be defined outside the component as it will cause the component to rerender when the store changes. Better use Redux.
+
+```jsx
+import { useSyncExternalStore } from "react";
+import { todosStore } from "./todoStore.js";
+
+function TodosApp() {
+  const todos = useSyncExternalStore(
+    todosStore.subscribe,
+    todosStore.getSnapshot
+  );
+  // ...
+}
 ```
 
 ### Don't define components inside components
