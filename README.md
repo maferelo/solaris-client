@@ -38,6 +38,7 @@ This project is a React Native application designed to optimize bus routes and s
 ### Installation
 
 1. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
+
+```sh
+git clone https://github.com/your_username_/Project-Name.git
+```
