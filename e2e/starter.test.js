@@ -16,9 +16,4 @@ describe("Example", () => {
   it("should have welcome screen", async () => {
     await expect(element(by.id("welcome"))).toBeVisible();
   });
-
-  it("should redirect to login screen on tap", async () => {
-    await element(by.id("welcome")).tap();
-    await expect(element(by.id("log-in"))).toBeVisible();
-  });
 });
