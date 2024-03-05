@@ -16,8 +16,8 @@ function Page() {
 
 let Entrypoint = Page;
 
-if (Constants.expoConfig.extra.storybookEnabled === "true")
-  Entrypoint = require("../../.storybook").default;
+// if (Constants.expoConfig.extra.storybookEnabled === "true")
+//  Entrypoint = require("../../.storybook").default;
 
 export default Entrypoint;
 
