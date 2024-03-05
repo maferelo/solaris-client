@@ -32,7 +32,7 @@ This project is a React Native application designed to optimize bus routes and s
 ### Prerequisites
 
 - [Expo Go app](https://expo.dev/client) (for testing on mobile devices)
-- Xcode 15.2 with command line tools (download from the App Store)
+- Ventura with Xcode 15.2 with command line tools (download from the App Store)
 - [Homebrew](https://brew.sh/)
 - [fastlane](https://docs.fastlane.tools/getting-started/ios/setup/) (for iOS builds)
 
@@ -74,4 +74,6 @@ npm build
 
 ## Troubleshoot
 
-[Provide troubleshooting steps for common issues.]
+```sh
+npx expo-doctor
+```
