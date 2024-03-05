@@ -12,7 +12,7 @@ module.exports = {
   apps: {
     "ios.debug": {
       type: "ios.app",
-      binaryPath: "bin/myapp.app",
+      binaryPath: "bin/client.app",
     },
   },
   devices: {

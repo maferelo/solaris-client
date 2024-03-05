@@ -14,10 +14,10 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.maferelo.myapp"
+      "bundleIdentifier": "com.maferelo.client"
     },
     "android": {
-      "package": "com.maferelo.myapp",
+      "package": "com.maferelo.client",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
