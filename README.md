@@ -31,14 +31,47 @@ This project is a React Native application designed to optimize bus routes and s
 
 ### Prerequisites
 
-- Node.js
-- React Native CLI
-- Expo
+- [Expo Go app](https://expo.dev/client) (for testing on mobile devices)
+- Xcode 15.2 with command line tools (download from the App Store)
+- [Homebrew](https://brew.sh/)
+- [fastlane](https://docs.fastlane.tools/getting-started/ios/setup/) (for iOS builds)
 
 ### Installation
 
-1. Clone the repo
+#### Clone the repo
 
 ```sh
-git clone https://github.com/your_username_/Project-Name.git
+git clone https://github.com/maferelo/solaris-client
 ```
+
+#### [Install NVM](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating) (Node Version Manager)
+
+#### Install Node.js
+
+```sh
+nvm install
+```
+
+#### Install Node Modules
+
+```sh
+npm install
+```
+
+## Usage
+
+### Run the Application
+
+```sh
+npm start
+```
+
+### Build the Application
+
+```sh
+npm build
+```
+
+## Troubleshoot
+
+[Provide troubleshooting steps for common issues.]
