@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "1.0.0",
-  "main": "expo-router/entry",
+  "main": "node_modules/expo/AppEntry.js",
   "private": true,
   "scripts": {
     "build": "eas build --profile development-simulator --platform ios --local",
