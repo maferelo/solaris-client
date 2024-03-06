@@ -1,13 +1,42 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 import Constants from "expo-constants";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-function App() {
-  return (
-    <View style={styles.container} testID="welcome">
-      <Text>Welcome!</Text>
-    </View>
-  );
-}
+function HomeScreen({ navigation }) {
+    return (
+      <View style={styles.container} testID="home">
+        <Text>Welcome!</Text>
+        <Button
+        title="Go to Details"
+        onPress={() => navigation.navigate('Details')}
+      />
+      </View>
+    );
+  }
+
+  function DetailsScreen() {
+    return (
+      <View style={styles.container} testID="details">
+        <Text>Details</Text>
+      </View>
+    );
+  }
+
+  const Stack = createNativeStackNavigator();
+
+  function App() {
+    return (
+      <NavigationContainer 
+        children={
+            <Stack.Navigator initialRouteName="Home">
+                <Stack.Screen name="Home" component={HomeScreen} />
+                <Stack.Screen name="Details" component={DetailsScreen} />
+            </Stack.Navigator>
+        }
+      />
+    );
+  }
 
 let AppEntryPoint = App;
 

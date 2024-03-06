@@ -84,6 +84,17 @@ npm run test
 
 ## Troubleshoot
 
+### Check for Issues
+
 ```sh
 npx expo-doctor
+```
+
+### Kill a Process Running on a Specific Port
+
+```sh
+PORT_NUMBER=8081
+lsof -i tcp:${PORT_NUMBER} | \
+  awk 'NR!=1 {print $2}' | \
+  xargs kill
 ```

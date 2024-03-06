@@ -13,7 +13,12 @@ describe("Example", () => {
     await device.reloadReactNative();
   });
 
-  it("should have welcome screen", async () => {
-    await expect(element(by.id("welcome"))).toBeVisible();
+  it("should have home screen", async () => {
+    await expect(element(by.id("home"))).toBeVisible();
+  });
+
+  it("should show navigate to details screen on tap", async () => {
+    await element(by.id("home")).tap();
+    await expect(element(by.id("details"))).toBeVisible();
   });
 });
