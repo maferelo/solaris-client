@@ -1,9 +1,15 @@
 import { Button, StyleSheet, Text, View } from "react-native";
 import Constants from "expo-constants";
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createNativeStackNavigator, NativeStackScreenProps } from '@react-navigation/native-stack';
 
-function HomeScreen({ navigation }) {
+type RootStackParamList = {
+    Home: undefined;
+    Details: undefined;
+};
+
+
+function HomeScreen({ navigation }: NativeStackScreenProps<RootStackParamList, 'Home'>) {
     return (
       <View style={styles.container} testID="home">
         <Text>Welcome!</Text>
@@ -23,7 +29,7 @@ function HomeScreen({ navigation }) {
     );
   }
 
-  const Stack = createNativeStackNavigator();
+  const Stack = createNativeStackNavigator<RootStackParamList>();
 
   function App() {
     return (
