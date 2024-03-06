@@ -1,48 +1,52 @@
 import { Button, StyleSheet, Text, View } from "react-native";
 import Constants from "expo-constants";
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator, NativeStackScreenProps } from '@react-navigation/native-stack';
+import { NavigationContainer } from "@react-navigation/native";
+import {
+  createNativeStackNavigator,
+  NativeStackScreenProps,
+} from "@react-navigation/native-stack";
 
 type RootStackParamList = {
-    Home: undefined;
-    Details: undefined;
+  Home: undefined;
+  Details: undefined;
 };
 
-
-function HomeScreen({ navigation }: NativeStackScreenProps<RootStackParamList, 'Home'>) {
-    return (
-      <View style={styles.container} testID="home">
-        <Text>Welcome!</Text>
-        <Button
+function HomeScreen({
+  navigation,
+}: NativeStackScreenProps<RootStackParamList, "Home">) {
+  return (
+    <View style={styles.container} testID="home">
+      <Text>Welcome!</Text>
+      <Button
         title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
+        onPress={() => navigation.navigate("Details")}
       />
-      </View>
-    );
-  }
+    </View>
+  );
+}
 
-  function DetailsScreen() {
-    return (
-      <View style={styles.container} testID="details">
-        <Text>Details</Text>
-      </View>
-    );
-  }
+function DetailsScreen() {
+  return (
+    <View style={styles.container} testID="details">
+      <Text>Details</Text>
+    </View>
+  );
+}
 
-  const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
-  function App() {
-    return (
-      <NavigationContainer 
-        children={
-            <Stack.Navigator initialRouteName="Home">
-                <Stack.Screen name="Home" component={HomeScreen} />
-                <Stack.Screen name="Details" component={DetailsScreen} />
-            </Stack.Navigator>
-        }
-      />
-    );
-  }
+function App() {
+  return (
+    <NavigationContainer
+      children={
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Details" component={DetailsScreen} />
+        </Stack.Navigator>
+      }
+    />
+  );
+}
 
 let AppEntryPoint = App;
 

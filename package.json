@@ -9,7 +9,10 @@
     "start": "expo start",
     "test": "detox test --configuration ios.sim.debug --reuse --watchAll",
     "tsc:check": "tsc",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prettier": "prettier \"**/*.+(json|ts|tsx)\"",
+    "format:check": "npm run prettier -- --check",
+    "format:fix": "npm run prettier -- --write"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "1.21.0",
