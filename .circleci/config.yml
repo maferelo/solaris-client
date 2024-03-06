@@ -18,10 +18,13 @@ jobs:
       - checkout
       - run:
           name: "Install"
-          command: "npm install && npm install -g eas-cli"
+          command: "npm ci && npm install -g eas-cli"
       - run:
           name: "Build"
           command: "npm run build"
+      - run:
+          name: "Test"
+          command: "npm run test"
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
