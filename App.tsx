@@ -1,10 +1,10 @@
-import { Button, StyleSheet, Text, View } from "react-native";
-import Constants from "expo-constants";
 import { NavigationContainer } from "@react-navigation/native";
 import {
   createNativeStackNavigator,
   NativeStackScreenProps,
 } from "@react-navigation/native-stack";
+import Constants from "expo-constants";
+import { Button, StyleSheet, Text, View } from "react-native";
 
 type RootStackParamList = {
   Home: undefined;

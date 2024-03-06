@@ -10,9 +10,10 @@
     "test": "detox test --configuration ios.sim.debug --reuse --watchAll",
     "tsc:check": "tsc",
     "lint": "eslint .",
-    "prettier": "prettier \"**/*.+(json|ts|tsx)\"",
+    "prettier": "prettier \"**/*.+(json|js|ts|tsx)\"",
     "format:check": "npm run prettier -- --check",
-    "format:fix": "npm run prettier -- --write"
+    "format:fix": "npm run prettier -- --write",
+    "prepare": "husky"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "1.21.0",
@@ -46,7 +47,9 @@
     "eslint-config-universe": "12.0.0",
     "expo-dev-client": "3.3.9",
     "expo-status-bar": "1.11.1",
+    "husky": "9.0.11",
     "jest": "29.7.0",
+    "lint-staged": "15.2.2",
     "prettier": "3.2.5",
     "typescript": "5.3.3"
   }
