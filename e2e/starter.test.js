@@ -4,7 +4,7 @@ describe("Example", () => {
 
     await device.openURL({
       url: `exp+my-app://expo-development-client/?url=${encodeURIComponent(
-        `http://localhost:8081`
+        `http://localhost:8081`,
       )}&disableOnboarding=1`,
     });
   });

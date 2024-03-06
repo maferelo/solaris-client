@@ -18,7 +18,7 @@ jobs:
       - checkout
       - run:
           name: "Install"
-          command: "npm install"
+          command: "npm install && npm install -g eas-cli"
       - run:
           name: "Build"
           command: "npm run build"
