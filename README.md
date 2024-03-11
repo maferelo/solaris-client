@@ -5,16 +5,16 @@ This project is a React Native application designed to optimize bus routes and s
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Getting Started](#getting-started)
+1. [Features](#features)
+1. [Getting Started](#getting-started)
    - [Prerequisites](#prerequisites)
    - [Installation](#installation)
-4. [Usage](#usage)
-5. [Technology Stack](#technology-stack)
-6. [Contributing](#contributing)
-7. [License](#license)
-8. [Contact](#contact)
-9. [Acknowledgments](#acknowledgments)
+1. [Usage](#usage)
+1. [Technology Stack](#technology-stack)
+1. [Contributing](#contributing)
+1. [License](#license)
+1. [Contact](#contact)
+1. [Acknowledgments](#acknowledgments)
 
 ## Introduction
 

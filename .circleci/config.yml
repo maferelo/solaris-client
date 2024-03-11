@@ -2,6 +2,8 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
+# Define a reusable executor called "node".
+# See: https://circleci.com/docs/2.0/reusing-config/#defining-executors
 orbs:
   node: circleci/node@5.2.0
 
@@ -35,7 +37,15 @@ workflows:
   test:
     jobs:
       - build-and-test
-  run-npm-command:
+  lint:
     jobs:
       - node/run:
           npm-run: lint
+  format:
+    jobs:
+      - node/run:
+          npm-run: format:check
+  type-check:
+    jobs:
+      - node/run:
+          npm-run: tsc:check
