@@ -24,7 +24,10 @@ jobs:
       - restore_cache:
           key: node-deps-{{ arch }}-v1-{{ checksum "package-lock.json" }}
       - run:
-          name: "Install"
+          name: "Install applesimutils"
+          command: "brew install applesimutils"
+      - run:
+          name: "Install node modules"
           command: "npm ci && npm install -g eas-cli@7.3.0"
       - run:
           name: "Build"
