@@ -20,7 +20,7 @@ config.resolver.resolveRequest = (context, moduleName, platform) => {
   const defaultResolveResult = context.resolveRequest(
     context,
     moduleName,
-    platform,
+    platform
   );
 
   if (
