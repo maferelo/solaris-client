@@ -8,6 +8,7 @@
     "docs": "STORYBOOK_ENABLED='true' expo start",
     "start": "expo start",
     "test": "detox test --configuration ios.sim.debug --reuse --watchAll",
+    "test:ci": "detox test --configuration ios.sim.debug --headless",
     "tsc:check": "tsc",
     "lint": "eslint .",
     "prettier": "prettier \"**/*.+(json|js|ts|tsx)\"",
