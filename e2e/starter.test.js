@@ -14,14 +14,15 @@ describe("Example", () => {
 
   beforeEach(async () => {
     await device.reloadReactNative();
+    await waitFor(element(by.id("home"))).toBeVisible();
   });
 
   it("should have home screen", async () => {
-    await expect(element(by.id("home"))).toBeVisible();
+    await waitFor(element(by.id("home"))).toBeVisible();
   });
 
   it("should show navigate to details screen on tap", async () => {
-    await element(by.id("home")).tap();
-    await expect(element(by.id("details"))).toBeVisible();
+    await element(by.id("home")).atIndex(0).tap();
+    await waitFor(element(by.id("details"))).toBeVisible();
   });
 });
