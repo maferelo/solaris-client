@@ -1,6 +1,9 @@
 describe("Example", () => {
   beforeAll(async () => {
     await device.launchApp({ newInstance: true });
+    await device.terminateApp();
+
+    await device.launchApp({ newInstance: true });
 
     await device.openURL({
       url: `exp+my-app://expo-development-client/?url=${encodeURIComponent(
@@ -14,11 +17,11 @@ describe("Example", () => {
   });
 
   it("should have home screen", async () => {
-    await expect(element(by.id("home")).atIndex(0)).toBeVisible();
+    await expect(element(by.id("home"))).toBeVisible();
   });
 
   it("should show navigate to details screen on tap", async () => {
-    await element(by.id("home")).atIndex(0).tap();
+    await element(by.id("home")).tap();
     await expect(element(by.id("details"))).toBeVisible();
   });
 });

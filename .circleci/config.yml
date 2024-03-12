@@ -40,7 +40,7 @@ jobs:
           command: "tar -xvzf ./*.tar.gz"
       - run:
           name: "Test"
-          command: "npm run start & npm run test:ci"
+          command: "npm run start & npm run test:ci -- --loglevel verbose"
       - store_artifacts:
           path: artifacts/
       - save_cache:
