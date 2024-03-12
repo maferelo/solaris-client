@@ -24,6 +24,9 @@ jobs:
       - restore_cache:
           key: node-deps-{{ arch }}-v1-{{ checksum "package-lock.json" }}
       - run:
+          name: "Intall gzip"
+          command: "brew install gzip"
+      - run:
           name: "Install applesimutils"
           command: "brew tap wix/brew && brew install applesimutils"
       - run:
