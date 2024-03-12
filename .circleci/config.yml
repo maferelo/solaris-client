@@ -36,8 +36,8 @@ jobs:
           name: "Build"
           command: "npm run build"
       - run:
-          name: "Extracting the .gz files"
-          command: "gzip -d $(./*.tar.gz) && ls -al"
+          name: "Extract"
+          command: "tar -xvzf ./*.tar.gz"
       - run:
           name: "Test"
           command: "npm run start & npm run test:ci"
