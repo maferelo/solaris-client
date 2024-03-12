@@ -36,6 +36,9 @@ jobs:
           name: "Build"
           command: "npm run build"
       - run:
+          name: "Extracting the .gz files"
+          command: "gzip -d -r . && ls -al"
+      - run:
           name: "Test"
           command: "npm run start & npm run test:ci"
       - save_cache:
