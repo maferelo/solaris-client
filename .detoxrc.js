@@ -9,6 +9,20 @@ module.exports = {
       setupTimeout: 120000,
     },
   },
+  artifacts: {
+    plugins: {
+      screenshot: {
+        enabled: true,
+        shouldTakeAutomaticSnapshots: true,
+        keepOnlyFailedTestsArtifacts: false,
+        takeWhen: {
+          testStart: true,
+          testDone: true,
+          appNotReady: true,
+        },
+      },
+    },
+  },
   apps: {
     "ios.debug": {
       type: "ios.app",

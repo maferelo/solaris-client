@@ -37,3 +37,6 @@ yarn-error.*
 #  builds
 myapp.app/
 *.gz
+
+# artifacts
+artifacts/
