@@ -1,9 +1,6 @@
 describe("Example", () => {
   beforeAll(async () => {
     await device.launchApp({ newInstance: true });
-    await device.terminateApp();
-
-    await device.launchApp({ newInstance: true });
 
     await device.openURL({
       url: `exp+my-app://expo-development-client/?url=${encodeURIComponent(
@@ -14,7 +11,6 @@ describe("Example", () => {
 
   beforeEach(async () => {
     await device.reloadReactNative();
-    await waitFor(element(by.id("home"))).toBeVisible();
   });
 
   it("should have home screen", async () => {
