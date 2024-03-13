@@ -14,7 +14,6 @@ const config = getDefaultConfig(__dirname);
 config.transformer.unstable_allowRequireContext = true;
 
 config.resolver.sourceExts.push("mjs");
-config.resolver.resolverMainFields.unshift("sbmodern");
 
 // Prevent storybook files from being bundled in the app
 config.resolver.resolveRequest = (context, moduleName, platform) => {
