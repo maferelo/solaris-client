@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "build": "eas build --profile development-simulator --platform ios --local",
-    "docs": "STORYBOOK_ENABLED='true' expo start",
-    "start": "expo start",
+    "start": "expo start --go",
+    "docs": "STORYBOOK_ENABLED='true' npm run start",
     "test": "detox test --configuration ios.sim.debug --reuse --watchAll",
     "test:ci": "detox test --configuration ios.sim.debug --headless",
     "tsc:check": "tsc",
