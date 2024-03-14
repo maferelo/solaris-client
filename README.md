@@ -10,11 +10,6 @@ This project is a React Native application designed to optimize bus routes and s
    - [Prerequisites](#prerequisites)
    - [Installation](#installation)
 1. [Usage](#usage)
-1. [Technology Stack](#technology-stack)
-1. [Contributing](#contributing)
-1. [License](#license)
-1. [Contact](#contact)
-1. [Acknowledgments](#acknowledgments)
 
 ## Introduction
 
@@ -75,11 +70,15 @@ npm run build
 
 ### Run e2e Tests
 
-Create a bin directory in the root of the project and move the build, then run the following command:
-
 ```sh
 npm run start
 npm run test
+```
+
+### Run the Docs
+
+```sh
+npm run docs
 ```
 
 ## Troubleshoot
