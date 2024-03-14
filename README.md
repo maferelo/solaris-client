@@ -10,6 +10,7 @@ This project is a React Native application designed to optimize bus routes and s
    - [Prerequisites](#prerequisites)
    - [Installation](#installation)
 1. [Usage](#usage)
+1. [Troubleshoot](#troubleshoot)
 
 ## Introduction
 
@@ -80,6 +81,10 @@ npm run test
 ```sh
 npm run docs
 ```
+
+### [Best Practices](docs/best-practices.md)
+
+### [Manage Dependencies](docs/managing-dependencies.md)
 
 ## Troubleshoot
 
