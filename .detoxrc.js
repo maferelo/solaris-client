@@ -13,7 +13,7 @@ module.exports = {
     plugins: {
       screenshot: {
         enabled: true,
-        shouldTakeAutomaticSnapshots: true,
+        shouldTakeAutomaticSnapshots: false,
         keepOnlyFailedTestsArtifacts: false,
         takeWhen: {
           testStart: true,
