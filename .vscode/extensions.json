@@ -13,6 +13,7 @@
     "davidanson.vscode-markdownlint",
     "christian-kohler.path-intellisense",
     "esbenp.prettier-vscode",
-    "richie5um2.vscode-sort-json"
+    "richie5um2.vscode-sort-json",
+    "redhat.vscode-yaml"
   ]
 }

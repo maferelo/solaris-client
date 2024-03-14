@@ -11,7 +11,7 @@
     "test:ci": "detox test --configuration ios.sim.debug --headless",
     "tsc:check": "tsc",
     "lint": "eslint .",
-    "prettier": "prettier \"**/*.+(json|js|ts|tsx)\"",
+    "prettier": "prettier \"**/*.+(js|ts|tsx|json|yml)\"",
     "format:check": "npm run prettier -- --check",
     "format:fix": "npm run prettier -- --write",
     "prepare": "husky"
