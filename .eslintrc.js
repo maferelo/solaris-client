@@ -14,6 +14,16 @@ module.exports = {
     node: true,
     "jest/globals": true,
   },
+  rules: {
+    // Rule reference: https://eslint.org/docs/latest/rules/
+    "no-restricted-imports": [
+      "error",
+      {
+        patterns: ["@/features/*/*"],
+      },
+    ],
+    "import/no-cycle": "error",
+  },
   globals: {
     // Detox
     device: false,
