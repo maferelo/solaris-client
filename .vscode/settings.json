@@ -1,0 +1,22 @@
+{
+  // https://code.visualstudio.com/docs/languages/overview
+  // https://code.visualstudio.com/docs/languages/javascript
+  // https://code.visualstudio.com/docs/getstarted/settings
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.trimTrailingWhitespace": true,
+  "editor.insertSpaces": true,
+  "files.exclude": {
+    "**/.git": true,
+    "node_modules": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "myapp.app": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true
+  }
+}
