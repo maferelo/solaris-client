@@ -6,6 +6,8 @@ import {
 import Constants from "expo-constants";
 import { Button, StyleSheet, Text, View } from "react-native";
 
+import { App as Application } from "@/pages/_app";
+
 type RootStackParamList = {
   Home: undefined;
   Details: undefined;
@@ -37,14 +39,16 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function App() {
   return (
-    <NavigationContainer
-      children={
-        <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="Details" component={DetailsScreen} />
-        </Stack.Navigator>
-      }
-    />
+    <Application>
+      <NavigationContainer
+        children={
+          <Stack.Navigator initialRouteName="Home">
+            <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen name="Details" component={DetailsScreen} />
+          </Stack.Navigator>
+        }
+      />
+    </Application>
   );
 }
 
