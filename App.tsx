@@ -4,8 +4,9 @@ import {
   NativeStackScreenProps,
 } from "@react-navigation/native-stack";
 import Constants from "expo-constants";
-import { Button, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
+import { Button } from "@/components/button";
 import { App as Application } from "@/pages/_app";
 
 type RootStackParamList = {

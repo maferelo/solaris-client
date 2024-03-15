@@ -1,5 +1,7 @@
-import { Button as RNUIButton } from "@rneui/themed";
-import { MouseEventHandler, ReactNode } from "react";
+import {
+  Button as RNEButton,
+  ButtonProps as RNEButtonProps,
+} from "@rneui/themed";
 
 const variants = {
   solid: {},
@@ -7,23 +9,10 @@ const variants = {
   clear: {},
 };
 
-export type ButtonProps = {
-  children: ReactNode;
+export interface ButtonProps extends RNEButtonProps {
   variant?: keyof typeof variants;
-  isLoading?: boolean;
-  isDisabled?: boolean;
-  onClick?: MouseEventHandler<HTMLButtonElement>;
-  icon?: JSX.Element;
-};
+}
 
-export const Button = ({
-  variant = "solid",
-  children,
-  ...props
-}: ButtonProps) => {
-  return (
-    <RNUIButton {...props} {...variants[variant]} title={variant}>
-      {children}
-    </RNUIButton>
-  );
+export const Button = ({ variant = "solid", ...props }: ButtonProps) => {
+  return <RNEButton {...props} {...variants[variant]} />;
 };
