@@ -7,6 +7,7 @@ import Constants from "expo-constants";
 import { StyleSheet, Text, View } from "react-native";
 
 import { Button } from "@/components/button";
+import { InputField } from "@/components/form/input-field";
 import { App as Application } from "@/pages/_app";
 
 type RootStackParamList = {
@@ -19,7 +20,7 @@ function HomeScreen({
 }: NativeStackScreenProps<RootStackParamList, "Home">) {
   return (
     <View style={styles.container} testID="home">
-      <Text>Welcome!</Text>
+      <InputField placeholder="Type here..." />
       <Button
         title="Go to Details"
         onPress={() => navigation.navigate("Details")}
