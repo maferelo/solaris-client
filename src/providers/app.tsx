@@ -2,6 +2,7 @@ import { ThemeProvider } from "@rneui/themed";
 import { ReactNode } from "react";
 
 import { theme } from "@/config/theme";
+
 type AppProviderProps = {
   children: ReactNode;
 };

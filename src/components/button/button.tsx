@@ -4,9 +4,9 @@ import {
 } from "@rneui/themed";
 
 const variants = {
-  solid: {},
-  outline: {},
   clear: {},
+  outline: {},
+  solid: {},
 };
 
 export interface ButtonProps extends RNEButtonProps {

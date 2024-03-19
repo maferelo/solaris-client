@@ -5,8 +5,8 @@ import { Button } from "@/components/button";
 import { InputField } from "@/components/form/input-field";
 
 export type RootStackParamList = {
-  Home: undefined;
   Details: undefined;
+  Home: undefined;
 };
 
 export function HomeScreen({
@@ -16,8 +16,8 @@ export function HomeScreen({
     <View style={styles.container} testID="home">
       <InputField placeholder="Type here..." />
       <Button
-        title="Go to Details"
         onPress={() => navigation.navigate("Details")}
+        title="Go to Details"
       />
     </View>
   );
@@ -25,9 +25,9 @@ export function HomeScreen({
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#fff",
     alignItems: "center",
+    backgroundColor: "#fff",
+    flex: 1,
     justifyContent: "center",
   },
 });

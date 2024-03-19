@@ -11,8 +11,8 @@ export type AppProps = {
 };
 
 type RootStackParamList = {
-  Home: undefined;
   Details: undefined;
+  Home: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -23,8 +23,8 @@ export function App() {
       <NavigationContainer
         children={
           <Stack.Navigator initialRouteName="Home">
-            <Stack.Screen name="Home" component={HomeScreen} />
-            <Stack.Screen name="Details" component={DetailsScreen} />
+            <Stack.Screen component={HomeScreen} name="Home" />
+            <Stack.Screen component={DetailsScreen} name="Details" />
           </Stack.Navigator>
         }
       />

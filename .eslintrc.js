@@ -1,7 +1,17 @@
 module.exports = {
-  root: true,
+  env: {
+    "jest/globals": true,
+    node: true,
+  },
   extends: ["universe/native", "universe/shared/typescript-analysis"],
-  plugins: ["jest", "perfectionist"],
+  globals: {
+    by: false,
+    // Detox
+    device: false,
+    element: false,
+    expect: false,
+    waitFor: false,
+  },
   overrides: [
     {
       files: ["*.ts", "*.tsx", "*.d.tsx"],
@@ -10,27 +20,17 @@ module.exports = {
       },
     },
   ],
-  env: {
-    node: true,
-    "jest/globals": true,
-  },
+  plugins: ["jest", "perfectionist"],
+  root: true,
   rules: {
     // Rule reference: https://eslint.org/docs/latest/rules/
-    "perfectionist/sort-interfaces": "error",
+    "import/no-cycle": "error",
     "no-restricted-imports": [
       "error",
       {
         patterns: ["@/features/*/*"],
       },
     ],
-    "import/no-cycle": "error",
-  },
-  globals: {
-    // Detox
-    device: false,
-    expect: false,
-    waitFor: false,
-    element: false,
-    by: false,
+    "perfectionist/sort-interfaces": "error",
   },
 };

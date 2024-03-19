@@ -2,9 +2,9 @@ import { Input as RNEInput, InputProps as RNEInputProps } from "@rneui/themed";
 import { FieldError } from "react-hook-form";
 
 const variants = {
-  solid: {},
-  outline: {},
   clear: {},
+  outline: {},
+  solid: {},
 };
 
 export interface InputFieldProps extends RNEInputProps {

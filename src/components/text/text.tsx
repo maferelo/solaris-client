@@ -1,9 +1,9 @@
 import { Text as RNEText, TextProps as RNETextProps } from "@rneui/themed";
 
 const variants = {
-  solid: {},
-  outline: {},
   clear: {},
+  outline: {},
+  solid: {},
 };
 
 export interface TextFieldProps extends RNETextProps {
