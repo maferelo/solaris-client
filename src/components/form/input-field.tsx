@@ -1,4 +1,5 @@
 import { Input as RNEInput, InputProps as RNEInputProps } from "@rneui/themed";
+import { FieldError } from "react-hook-form";
 
 const variants = {
   solid: {},
@@ -7,6 +8,7 @@ const variants = {
 };
 
 export interface InputFieldProps extends RNEInputProps {
+  error?: FieldError;
   variant?: keyof typeof variants;
 }
 

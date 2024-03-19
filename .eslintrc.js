@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   extends: ["universe/native", "universe/shared/typescript-analysis"],
-  plugins: ["jest"],
+  plugins: ["jest", "perfectionist"],
   overrides: [
     {
       files: ["*.ts", "*.tsx", "*.d.tsx"],
@@ -16,6 +16,7 @@ module.exports = {
   },
   rules: {
     // Rule reference: https://eslint.org/docs/latest/rules/
+    "perfectionist/sort-interfaces": "error",
     "no-restricted-imports": [
       "error",
       {
