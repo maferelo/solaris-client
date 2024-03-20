@@ -1,7 +1,4 @@
-import {
-  Button as RNEButton,
-  ButtonProps as RNEButtonProps,
-} from "@rneui/themed";
+import { Button as RNEButton } from "@rneui/themed";
 
 const variants = {
   clear: {},
@@ -9,9 +6,11 @@ const variants = {
   solid: {},
 };
 
-export interface ButtonProps extends RNEButtonProps {
+export type ButtonProps = {
+  title: string;
   variant?: keyof typeof variants;
-}
+  onPress?: () => void;
+};
 
 export const Button = ({ variant = "solid", ...props }: ButtonProps) => {
   return <RNEButton {...props} {...variants[variant]} />;
