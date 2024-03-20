@@ -32,6 +32,15 @@
         "projectId": "99da3ec4-eeaa-4323-bc05-6862be090bf4"
       }
     },
+    "plugins": [
+      [
+        "@sentry/react-native/expo",
+        {
+          "organization": "omibus",
+          "project": "omibus-client"
+        }
+      ]
+    ],
     "scheme": "your-app-scheme"
   }
 }

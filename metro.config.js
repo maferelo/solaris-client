@@ -1,6 +1,6 @@
 // Learn more https://docs.expo.io/guides/customizing-metro
+const { getSentryExpoConfig } = require("@sentry/react-native/metro");
 const { generate } = require("@storybook/react-native/scripts/generate");
-const { getDefaultConfig } = require("expo/metro-config");
 const path = require("path");
 
 generate({
@@ -8,7 +8,7 @@ generate({
 });
 
 /** @type {import('expo/metro-config').MetroConfig} */
-const config = getDefaultConfig(__dirname);
+const config = getSentryExpoConfig(__dirname);
 
 // Storybook required to enable dynamic story imports
 config.transformer.unstable_allowRequireContext = true;
