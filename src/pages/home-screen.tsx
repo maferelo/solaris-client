@@ -16,7 +16,10 @@ export function HomeScreen({
     <View style={styles.container} testID="home">
       <InputField placeholder="Type here..." />
       <Button
-        onPress={() => navigation.navigate("Details")}
+        onPress={() => {
+          navigation.navigate("Details");
+          throw new Error("Hello, again, Sentry!");
+        }}
         title="Go to Details"
       />
     </View>
