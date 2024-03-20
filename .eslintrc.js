@@ -18,8 +18,36 @@ module.exports = {
       parserOptions: {
         project: "./tsconfig.json",
       },
+      rules: {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            selector: "variable",
+            format: ["camelCase", "UPPER_CASE"],
+            types: ["boolean", "string", "number", "array"],
+          },
+          {
+            selector: "parameter",
+            format: ["camelCase"],
+            leadingUnderscore: "allow",
+          },
+          {
+            selector: "property",
+            format: ["camelCase", "PascalCase", "snake_case"],
+          },
+          {
+            selector: "typeLike",
+            format: ["PascalCase"],
+          },
+          {
+            selector: "enumMember",
+            format: ["PascalCase", "UPPER_CASE"],
+          },
+        ],
+      },
     },
   ],
+  parser: "@typescript-eslint/parser",
   plugins: ["jest", "perfectionist"],
   root: true,
   rules: {
@@ -32,5 +60,6 @@ module.exports = {
       },
     ],
     "perfectionist/sort-interfaces": "error",
+    "react/jsx-boolean-value": ["error", "never"],
   },
 };
