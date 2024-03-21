@@ -18,7 +18,6 @@ export function HomeScreen({
       <Button
         onPress={() => {
           navigation.navigate("Details");
-          throw new Error("Hello, again, Sentry!");
         }}
         title="Go to Details"
       />
