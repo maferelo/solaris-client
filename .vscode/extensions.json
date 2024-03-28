@@ -18,6 +18,7 @@
     "rne.snippets",
     "christian-kohler.npm-intellisense",
     "msjsdiag.vscode-react-native",
-    "dsznajder.es7-react-js-snippets"
+    "dsznajder.es7-react-js-snippets",
+    "sonarsource.sonarlint-vscode"
   ]
 }
