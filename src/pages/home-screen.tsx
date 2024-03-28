@@ -19,7 +19,7 @@ export function HomeScreen({
         onPress={() => {
           navigation.navigate("Details");
         }}
-        title="Go to Details"
+        label="Go to Details"
       />
     </View>
   );
